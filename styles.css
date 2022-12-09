@@ -1,252 +1,271 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Rubik:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Rubik:wght@300;400;500;700&display=swap");
 
 body {
-    font-family: 'Rubik', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3b3b3b;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 16px;
+}
+
+nav {
+  background-color: rgb(203, 203, 203);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  margin: none;
+  z-index: 5;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+nav svg {
+  width: 25px;
+  margin: none;
+  padding: none;
+  position: absolute;
+  right: 50px;
+  cursor: pointer;
+}
+main {
+  padding: none;
+}
+.design .designHoodie {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.design .designHoodie h2 {
+  margin-bottom: 2px;
+}
+
+.design .designHoodie hr {
+  height: 5px;
+  border-width: 0;
+  text-align: center;
+  background-color: #333;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.design .designHoodie .imageDesign img {
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.design .designHoodie .imageDesignHide {
+  display: none;
+}
+
+.design .designHoodie .imageDesignHide img {
+  width: 0;
+}
+
+.isiFeature p {
+  color: black;
+}
+
+hr {
+  height: 5px;
+  border-width: 0;
+  text-align: center;
+  background-color: #333;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.features .containerIsiFeature{
+  margin: 10px;
+}
+
+.isiFeature {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: space-between;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(203, 203, 203);
+}
+
+.features .isiFeature h3 {
+  margin-bottom: 0px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+}
+.features img{
+  display: flex;
+  width: 100%;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+main .overview {
+  color: white;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  margin: none;
+}
+
+main p {
+  color: white;
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section h2 {
+  font-size: 35px;
+  margin: 0 0 10px 0;
+  display: flex;
+  top: 50px;
+}
+.container_pricing {
+  display: flex;
+  justify-content: space-between;
+}
+.container_pricing .priceOne {
+  margin: 0px 40px;
+}
+
+.pricing .priceOne p {
+  color: black;
+}
+section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact .container_contact {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact .container_contact a {
+  font-size: 20px;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+.fa-instagram {
+  background: #700e0e;
+  color: white;
+}
+.fa-telegram {
+  background: #1e8bda;
+  color: white;
+}
+.fa-whatsapp {
+  background: #03ba33;
+  color: white;
+}
+.contact p {
+  color: black;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 10px;
+  color: black;
+}
+footer p {
+  text-align: center;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 700px) {
+  nav svg {
+    display: none;
   }
-  
-  header {
-    background-color: #3B3B3B;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  h1 {
-    margin: 0;
-    font-size: 16px;
-  }
-  
-  nav {
-    background-color: rgb(203, 203, 203);
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    align-content: space-between;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    margin: none;
-    z-index: 5;
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-  }
-  
   nav li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    margin : 5px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #fff;
-    background-color: #333;
-  }
-
-  nav svg{
-    width: 25px;
-    margin: none;
-    padding: none;
-    position: absolute;
-    right: 50px;
-    cursor: pointer;
-  }
-  main {
-    padding: none;
-  }
-  .design .designHoodie {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  } 
-
-  .design .designHoodie h2{
-    margin-bottom: 2px;
-  }
-
-  .design .designHoodie hr{
-    height:5px;
-    border-width:0;
-    text-align: center;
-    background-color: #333;
-    margin-bottom: 5px ;
-    margin-top: 0;
-  }
-
-  .design .designHoodie .imageDesign img{
-    width: 100%;
-    margin: 0;  
-    cursor: pointer;
-  }
-
-  .design .designHoodie .imageDesignHide{
-    display:none;
-  }
-
-  .design .designHoodie .imageDesignHide img{
-    width: 0;
-  }
-
-  .isiFeature p{
-    color: black;
-  }
-
-  hr{
-    height:5px;
-    border-width:0;
-    text-align: center;
-    background-color: #333;
-    margin-bottom: 5px ;
-    margin-top: 0;
-  }
-
-  .isiFeature{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: space-between;
-    justify-content: center;
-    margin: 5px;
+    margin: 0px;
     padding: 5px;
-    border-radius: 10px;
   }
-
-  .features .isiFeature h3{
-    margin-bottom: 0px;
-  }
-
-  section {
-    margin-bottom: 20px;
-  }
-
   main .overview {
-    color: white;
-    text-align: center;
-    background-image: url("https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-    background-size: cover;
-    background-position: center;
-    padding: 50px;
-    margin: none;
+    padding: 10px;
   }
 
-  main p{
-    color: white;
+  .design .designHoodie .imageDesignHide {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .design .designHoodie .imageDesignHide img {
     width: 100%;
   }
 
-  section {
+  .design .designHoodie .imageDesign {
+    display: none;
+  }
+
+  .container_pricing {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
-  section h2 {
-    font-size: 35px;
-    margin: 0 0 10px 0;
-    display: flex;
-    top: 50px;
-  }
-  .container_pricing{
-    display: flex;
-    justify-content: space-between;
-  }
-  .container_pricing .priceOne{
-    margin: 0px 40px;
-  }
-
-  .pricing .priceOne p{
-    color: black;
-  }
-  section ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .contact .container_contact {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .contact .container_contact a{
-    font-size: 20px;
-    margin: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    border-radius: 50%;
-    text-decoration: none;
-  }
-
-  .fa:hover{
-    opacity: 0.7;
-  }
-
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  .fa-instagram {
-    background: #700e0e;
-    color: white;
-  }
-  .fa-telegram {
-    background: #1e8bda;
-    color: white;
-  }
-  .fa-whatsapp {
-    background: #03ba33;
-    color: white;
-  }
-  .contact p{
-    color :black;
-  }
-
-  footer {
-    background-color: #F8F8F8;
-    padding: 10px;
-    color : black;
-  }
-  footer p {
-    text-align: center;
-    font-size: 12px;
-  }
-
-  @media screen and (max-width: 700px){
-    nav svg{
-      display: none;
-    }
-    nav li a{
-      margin: 0px;
-      padding: 5px;
-    }
-    main .overview {
-      padding: 10px;
-    }
-
-    .design .designHoodie .imageDesignHide{
-      display: flex;
-      flex-direction: column;
-    }
-
-    .design .designHoodie .imageDesignHide img{
-      width: 100%;
-    }
-    .design .designHoodie .imageDesign{
-      display: none;
-    }
-
-  }
+}
