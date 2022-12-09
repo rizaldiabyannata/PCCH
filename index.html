@@ -57,14 +57,18 @@
           <h2>Design</h2>
           <hr style="width: 25%" />
           <div class="imageDesign">
-            <img id="imageClick" src="asset/desain/desain depan fix.jpg" style="display: flex;" onclick="changeImage()"/>
-            <!-- <img id="imageClick" src="asset/desain/desain depan fix.jpg" style="display: flex;"/> -->
-            <!-- <img class="change-image" id="front-image" src="asset/desain/desain depan fix.jpg" style="display: block;" /> -->
+            <img id="front-image" src="asset\desain\desain_depan_fix.jpg" style="display: flex;" onclick="changeImageOne()" />
+            <img id="back-image" src="asset\desain\desain_belakang_fix.jpg" style="display: none;" onclick="changeImageTwo()"/>
+          </div>
+          <div class="imageDesignHide">
+            <img src="asset\desain\desain_depan_fix.jpg" />
+            <img src="asset\desain\desain_belakang_fix.jpg"  />
           </div>
         </div>
-      </section>
+      </section>      
       <section id="features" class="features">
         <h2>Product Features and Benefits</h2>
+        <hr style="width: 25%" />
         <ul>
           <div class="isiFeature">
             <h3>Cooling Technology</h3>
@@ -89,9 +93,10 @@
       </section>
       <section id="pricing" class="pricing">
         <h2>Product Pricing</h2>
+        <hr style="width: 25%" />
         <div class="container_pricing">
           <div class="priceOne">
-            <h3>Harga Pertama</h3>
+            <h3>Heater Only</h3>
             <div class="specs">
               <p>1</p>
               <p>2</p>
@@ -100,7 +105,7 @@
             </div>
           </div>
           <div class="priceOne">
-            <h3>Harga Pertama</h3>
+            <h3>Cooler (Fan) Only</h3>
             <div class="specs">
               <p>1</p>
               <p>2</p>
@@ -109,7 +114,7 @@
             </div>
           </div>
           <div class="priceOne">
-            <h3>Harga Pertama</h3>
+            <h3>Full Set</h3>
             <div class="specs">
               <p>1</p>
               <p>2</p>
@@ -120,6 +125,7 @@
       </section>
       <section class="contact" id="contact">
         <h2>Contact</h2>
+        <hr style="width: 15%" />
         <div class="container_contact">
           <a
             href="https://api.whatsapp.com/send/?phone=%2B6285238935528&text&type=phone_number&app_absent=0"

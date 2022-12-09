@@ -73,6 +73,7 @@ body {
     flex-direction: column;
     align-items: center;
   } 
+
   .design .designHoodie h2{
     margin-bottom: 2px;
   }
@@ -86,18 +87,33 @@ body {
     margin-top: 0;
   }
 
-  .design .designHoodie img{
+  .design .designHoodie .imageDesign img{
     width: 100%;
     margin: 0;  
+    cursor: pointer;
   }
 
-  .design .designHoodie{
-    cursor: pointer;
+  .design .designHoodie .imageDesignHide{
+    display:none;
+  }
+
+  .design .designHoodie .imageDesignHide img{
+    width: 0;
   }
 
   .isiFeature p{
     color: black;
   }
+
+  hr{
+    height:5px;
+    border-width:0;
+    text-align: center;
+    background-color: #333;
+    margin-bottom: 5px ;
+    margin-top: 0;
+  }
+
   .isiFeature{
     display: flex;
     flex-direction: column;
@@ -123,12 +139,13 @@ body {
     background-image: url("https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-size: cover;
     background-position: center;
-    padding: 100px;
+    padding: 50px;
     margin: none;
   }
 
   main p{
     color: white;
+    width: 100%;
   }
 
   section {
@@ -216,10 +233,20 @@ body {
       margin: 0px;
       padding: 5px;
     }
+    main .overview {
+      padding: 10px;
+    }
 
-  }
-  @media screen and (max-width: 500px){
-    nav svg{
+    .design .designHoodie .imageDesignHide{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .design .designHoodie .imageDesignHide img{
+      width: 100%;
+    }
+    .design .designHoodie .imageDesign{
       display: none;
     }
+
   }
