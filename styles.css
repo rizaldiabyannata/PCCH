@@ -196,6 +196,7 @@ section h2 {
 }
 
 .pricing .priceOne .price{
+  color: #1B365C;
   background-color:rgb(215, 215, 215);
   text-align: center;
   padding: 10px 3px;
@@ -204,9 +205,15 @@ section h2 {
 }
 
 .pricing .priceOne .price:hover{
-  background-color:rgb(83, 218, 255);
-  content: "BUY NOW";
+  background-color:#1B365C;
+  text-decoration: none;
+  color: white;
+  
 }
+
+/* .pricing .priceOne .price:hover::after{
+  content: " BUY NOW";
+} */
 
 section ul {
   margin: 0;
