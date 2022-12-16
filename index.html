@@ -23,13 +23,29 @@
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div id="sliderBar" class="sidenav">
+        <a href="#overview">Overview</a>
+        <a href="#design">Design</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="containerHamburger" id="containerHamburger" onclick="openNav()">
+        <label for="check" class="bar">
+          <input id="check" type="checkbox">
+          <span class="top" id="line1"></span>
+          <span class="middle" id="line2"></span>
+          <span class="bottom" id="line3"></span>
+      </label>
+      </div>
       <svg
+        onclick="location.href='#pricing'"
         class="w-6 h-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-      >
+        >
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -99,37 +115,52 @@
         <div class="container_pricing">
           <div class="priceOne">
             <h3>Cooler (Fan) Only</h3>
-            <div class="specs">
-              <p>Battery : Rechargeable lithium-ion, 4000 mAh</p>
-              <p>Fan-based</p>
-              <p>Up to 4 hours of cooling</p>
-              <p>Charging time: 2-3 hours</p>
+            <ul class="specs">
+              <li>Battery : Rechargeable lithium-ion, 4000 mAh</li>
+              <li>Fan-based</li>
+              <li>Up to 4 hours of cooling</li>
+              <li>Charging time: 2-3 hours</li>
               <h4>Warranty and customer service: 6-month limited warranty, 24/7 customer support</h4>
+            </ul>
+            <h3 class="price" id="price1" onmouseover="changeTxt1()" onmouseout="backNormal1()" onclick="loading1()">Harga : Rp315,000</h3>
+            <div class="loader" id="loader1">
+              <div class="scanner">
+                <span>Loading...</span>
+              </div>
             </div>
-            <h3 class="price" id="price1" onmouseover="changeTxt1()" onmouseout="backNormal1()">Harga : Rp315,000</h3>
           </div>
           <div class="priceOne">
             <h3>Heater Only</h3>
-            <div class="specs">
-              <p>Battery : Rechargeable lithium-ion, 4000 mAh</p>
-              <p>Heating technology: Carbon fiber heating elements</p>
-              <p>2 hours of heating</p>
-              <p>Charging time: 2-3 hours</p>
+            <ul class="specs">
+              <li>Battery : Rechargeable lithium-ion, 4000 mAh</li>
+              <li>Heating technology: Carbon fiber heating elements</li>
+              <li>2 hours of heating</li>
+              <li>Charging time: 2-3 hours</li>
               <h4>Warranty and customer service: 6-month limited warranty, 24/7 customer support</h4>
+            </ul>
+            <h3 class="price" id="price2" onmouseover="changeTxt2()" onmouseout="backNormal2()" onclick="loading2()">Harga : Rp340,000</h3>
+            <div class="loader pricing" id="loader2">
+              <div class="scanner">
+                <span>Loading...</span>
+              </div>
             </div>
-            <h3 class="price" id="price2" onmouseover="changeTxt2()" onmouseout="backNormal2()">Harga : Rp340,000</h3>
           </div>
           <div class="priceOne">
             <h3>Full Set</h3>
-            <div class="specs">
-              <p>Cooling technology: Fan-based</p>
-              <p>Heating technology: Carbon fiber heating elements</p>
-              <p>Battery : rechargeable lithium-ion, 4000 mAh</p>
-              <p>Operating time: up to 4 hours of cooling or 2 hours of heating</p>
-              <p>Charging time: 2-3 hours</p>
+            <ul class="specs">
+              <li>Cooling technology: Fan-based</li>
+              <li>Heating technology: Carbon fiber heating elements</li>
+              <li>Battery : rechargeable lithium-ion, 4000 liAh</li>
+              <li>Operating time: up to 4 hours of cooling or 2 hours of heating</li>
+              <li>Charging time: 2-3 hours</li>
               <h4>Warranty and customer service: 6-month limited warranty, 24/7 customer support</h4>
+            </ul>
+            <h3 class="price" id="price3" onmouseover="changeTxt3()" onmouseout="backNormal3()" onclick="loading3()">Harga : Rp370.000</h3>
+            <div class="loader" id="loader3">
+              <div class="scanner">
+                <span>Loading...</span>
+              </div>
             </div>
-            <h3 class="price" id="price3" onmouseover="changeTxt3()" onmouseout="backNormal3()">Harga : Rp370.000</h3>
           </div>
       </section>
       <section class="contact" id="contact">

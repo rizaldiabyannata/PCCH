@@ -64,6 +64,106 @@ nav svg {
   right: 50px;
   cursor: pointer;
 }
+
+.containerHamburger{
+  display: none;
+  z-index: 2;
+  margin-left: 0px;
+}
+
+input[type = "checkbox"] {
+  /* -webkit-appearance: none; */
+  display:inline-block;
+  visibility: hidden;
+}
+
+.bar {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+  scale: 0.8;
+}
+
+.bar span {
+  position: absolute;
+  width: 45px;
+  height: 7px;
+  background-color: #333;
+  border-radius: 100px;
+  display: inline-block;
+  transition: 0.3s ease;
+  left: 0;
+}
+
+.bar span.top {
+  top: 0;
+}
+
+.bar span.middle {
+  top: 17px;
+}
+
+.bar span.bottom {
+  bottom: 0;
+}
+
+input[type]:checked ~ span.top {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 48px;
+  left: 5px;
+}
+
+input[type]:checked ~ span.bottom {
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  width: 48px;
+  bottom: -1px;
+  box-shadow: 0 0 10px #495057;
+}
+
+input[type]:checked ~ span.middle {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  /* margin-top: 89px; */
+  padding-top: 89px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 8px;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 main {
   padding: none;
 }
@@ -191,8 +291,15 @@ section h2 {
   text-decoration: underline;
 }
 
-.pricing .priceOne p {
-  color: black;
+.pricing .priceOne .specs{
+  list-style-position: outside;
+  list-style: circle ;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+.pricing .priceOne .specs li {
+  margin: 10px 0px;
 }
 
 .pricing .priceOne .price{
@@ -202,6 +309,8 @@ section h2 {
   padding: 10px 3px;
   border-radius: 5px;
   cursor: pointer;
+  margin: 18px 0px 5px 0px;
+  height: 26px;
 }
 
 .pricing .priceOne .price:hover{
@@ -209,6 +318,53 @@ section h2 {
   text-decoration: none;
   color: white;
   
+}
+
+.container_pricing .priceOne .loader{
+  display: none;
+  background-color: #1B365C;
+  padding: 10px 3px;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 18px 0px 5px;
+}
+
+.scanner span {
+  color: transparent;
+  font-size: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.scanner span::before {
+  content: "Loading...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 4px solid white;
+  overflow: hidden;
+  color: white;
+  animation: load91371 2s linear infinite;
+}
+
+@keyframes load91371 {
+  0%, 10%, 100% {
+    width: 0;
+  }
+
+  10%,20%,30%,40%,50%,60%,70%,80%,90%,100% {
+    border-right-color: transparent;
+  }
+
+  11%,21%,31%,41%,51%,61%,71%,81%,91% {
+    border-right-color: #17FEFF;
+  }
+
+  60%, 80% {
+    width: 100%;
+  }
 }
 
 /* .pricing .priceOne .price:hover::after{
@@ -271,13 +427,30 @@ footer p {
 }
 
 @media screen and (max-width: 700px) {
+  nav{
+    justify-content: flex-start;
+    padding: 5px;
+  }
+
   nav svg {
+    display: flex;
+    justify-content: flex-end;
+    right: 15px;
+  }
+
+  nav ul{
     display: none;
   }
+
   nav li a {
     margin: 0px;
     padding: 5px;
   }
+
+  .containerHamburger{
+  display: flex;
+  }
+
   main .overview {
     padding: 10px;
   }
@@ -299,4 +472,8 @@ footer p {
     display: flex;
     flex-direction: column;
   }
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
